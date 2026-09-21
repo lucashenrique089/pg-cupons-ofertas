@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cupons e Ofertas Especiais | Roma Pneus</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -252,14 +245,6 @@
   padding-top: 10px; margin-bottom: 0;
 }
 .rp-card-foot { padding: 16px 20px 20px; display: flex; flex-direction: column; gap: 10px; }
-.rp-btn-copiar {
-  background-color: transparent; color: var(--rp-azul);
-  border: 1px solid #CBD5E1; padding: 10px; border-radius: 30px;
-  font-size: .82rem; font-weight: 700; cursor: pointer;
-  text-align: center; display: flex; align-items: center;
-  justify-content: center; gap: 6px; transition: .2s;
-}
-.rp-btn-copiar:hover { background-color: var(--rp-cinza-bg); border-color: var(--rp-azul); }
 .rp-card-instrucao {
   display: flex; align-items: center; gap: 8px;
   font-size: .8rem; font-weight: 700; color: var(--rp-azul);
@@ -535,15 +520,14 @@
   .rp-contexto-inner { justify-content: center; }
 }
 </style>
-</head>
 
-<body>
 <div class="rp-page">
 
   <!-- ============ BARRA DE CONTEXTO ============ -->
   <div class="rp-contexto" id="rpContexto">
     <div class="rp-contexto-inner">
       <div class="rp-contexto-lado">
+        <!-- Lucas: atribuir aqui o caminho da logo do banco de mídia do Magento -->
         <img src="logo-red.png" alt="Roma Pneus - Pneus e Serviços Automotivos" class="rp-logo">
         <a class="rp-pill" href="https://romapneus.com.br/filiais" target="_blank" rel="noopener">
           <span class="material-icons-outlined">storefront</span>
@@ -720,49 +704,37 @@
      ============================================================ */
   const CATALOGO_GOODYEAR = {
     "CAOA Chery": {
-      "TIGGO 5X": [
-        "215/60R17",
-        "225/55R18"
-      ],
-      "TIGGO 7 PRO": [
-        "225/60R18"
-      ],
-      "TIGGO 8": [
-        "235/55R18"
-      ]
+      "ARRIZO": ["205/50R17"],
+      "TIGGO": ["235/60R16"],
+      "TIGGO 2": ["205/55R16", "235/60R16"],
+      "TIGGO 3X": ["205/55R16"],
+      "TIGGO 5X": ["215/60R17", "225/55R18"],
+      "TIGGO 7 PRO": ["225/60R18"],
+      "TIGGO 8": ["235/55R18"]
     },
     "Chevrolet": {
-      "CELTA": [
-        "165/70R13",
-        "175/65R14"
-      ],
-      "COBALT": [
-        "195/65R15"
-      ],
-      "CORSA": [
-        "165/70R13",
-        "175/65R14"
-      ],
-      "CRUZE": [
-        "215/50R17",
-        "225/50R17"
-      ],
-      "EQUINOX": [
-        "235/40R19",
-        "235/50R19"
-      ],
-      "EQUINOX EV": [
-        "245/55R19"
-      ],
-      "EQUINOX II": [
-        "235/50R19"
-      ],
+      "AGILE": ["175/65R14", "185/60R15", "195/55R16"],
+      "ASTRA": ["195/60R15", "205/55R16"],
+      "BLAZER": ["225/75R15", "235/70R16", "235/75R15"],
+      "BOLT": ["215/50R17"],
+      "C-10": ["255/60R15"],
+      "CELTA": ["165/70R13", "175/65R14"],
+      "COBALT": ["195/65R15"],
+      "CORSA": ["165/70R13", "175/65R14"],
+      "CRUZE": ["215/50R17", "225/50R17"],
+      "D-20": ["255/60R15"],
+      "EQUINOX": ["235/50R19", "235/50R20"],
+      "EQUINOX EV": ["245/55R19"],
+      "EQUINOX II": ["235/50R19"],
+      "GRAND BLAZER": ["245/75R16"],
+      "MERIVA": ["175/70R14", "185/60R15"],
       "MONTANA": [
         "175/70R14",
         "185/60R15",
         "195/55R16",
         "215/60R16"
       ],
+      "OMEGA": ["225/55R17"],
       "ONIX": [
         "175/70R14",
         "185/65R15",
@@ -770,37 +742,38 @@
         "195/55R16",
         "195/65R15"
       ],
-      "ONIX PLUS": [
-        "195/55R16"
-      ],
+      "ONIX PLUS": ["195/55R16"],
+      "ONIX.": ["185/65R15"],
+      "OPALA": ["215/70R14", "235/60R15"],
       "PRISMA": [
         "165/70R13",
         "175/65R14",
         "185/65R15",
         "185/70R14"
       ],
-      "S-10": [
-        "235/75R15"
-      ],
+      "S-10": ["235/70R16", "235/75R15", "265/60R18"],
+      "S-10 II": ["255/65R17"],
       "S10": [
         "225/75R15",
         "235/75R15",
-        "245/70R16"
+        "265/60R18",
+        "265/70R18"
       ],
-      "SPIN": [
-        "195/65R15"
+      "SILVERADO": ["215/80R16", "245/75R16", "275/60R20"],
+      "SONIC": ["195/65R15", "205/55R16"],
+      "SPIN": ["195/65R15"],
+      "TRACKER": ["215/55R17", "215/60R16", "235/60R16"],
+      "TRAILBLAZER": ["265/60R18"],
+      "VECTRA": [
+        "185/70R14",
+        "195/60R15",
+        "195/65R15",
+        "205/55R16"
       ],
-      "TRACKER": [
-        "215/55R17",
-        "215/60R16",
-        "235/60R16"
-      ]
+      "ZAFIRA": ["195/65R15", "205/55R16"]
     },
     "Citroen": {
-      "AIRCROSS": [
-        "195/55R16",
-        "205/60R16"
-      ],
+      "AIRCROSS": ["195/55R16", "205/60R16"],
       "C3": [
         "185/60R15",
         "185/65R14",
@@ -808,50 +781,49 @@
         "195/60R15",
         "195/65R15"
       ],
-      "C3 AIRCROSS": [
-        "215/60R17"
+      "C3 AIRCROSS": ["215/60R17"],
+      "C3 PICASSO": ["195/55R16"],
+      "C4": ["195/65R15", "205/55R16", "225/45R17"],
+      "C4 CACTUS": ["205/55R17"],
+      "C4 GRAND PICASSO": ["215/50R17", "215/55R16"],
+      "C4 LOUNGE": ["205/55R16", "225/45R17"],
+      "C4 PALLAS": ["215/55R16"],
+      "C4 PICASSO": ["215/50R17", "215/55R16"],
+      "C5": ["205/65R15", "245/45R18"],
+      "C6": ["245/45R18"],
+      "DS3": ["205/45R17"],
+      "DS4": ["225/45R18"],
+      "JUMPER": [
+        "195/70R15",
+        "205/70R15",
+        "205/75R16",
+        "225/75R16"
       ],
-      "C3 PICASSO": [
-        "195/55R16"
-      ],
-      "C4 CACTUS": [
-        "205/55R17"
-      ],
-      "C4 LOUNGE": [
-        "205/55R16",
-        "225/45R17"
-      ]
+      "JUMPY": ["215/65R16"]
     },
     "Fiat": {
+      "500": ["185/55R15"],
+      "500C": ["205/40R17"],
+      "500E": ["195/55R16"],
       "ARGO": [
         "175/65R14",
         "185/60R15",
         "195/55R16",
         "205/60R15"
       ],
-      "CRONOS": [
-        "185/60R15",
-        "195/55R16",
-        "205/45R17"
-      ],
-      "FASTBACK": [
-        "205/50R17",
-        "215/45R18"
-      ],
-      "FASTBACK ABARTH": [
-        "215/45R18"
-      ],
-      "FIORINO": [
-        "175/70R14"
-      ],
-      "GRAND SIENA": [
-        "185/65R14",
-        "195/55R16"
-      ],
-      "MOBI": [
-        "165/70R13",
-        "175/65R14"
-      ],
+      "BRAVO": ["205/55R16"],
+      "CRONOS": ["185/60R15", "195/55R16", "205/45R17"],
+      "DOBLÓ": ["175/70R14"],
+      "DUCATO": ["205/70R15", "205/75R16"],
+      "FASTBACK": ["205/50R17", "215/45R18"],
+      "FASTBACK ABARTH": ["215/45R18"],
+      "FIORINO": ["175/70R14"],
+      "FREEMONT": ["225/65R17"],
+      "GRAND SIENA": ["185/65R14", "195/55R16"],
+      "IDEA": ["195/55R16", "195/60R15"],
+      "LINEA": ["195/65R15", "205/55R16"],
+      "MAREA": ["195/60R15"],
+      "MOBI": ["165/70R13", "175/65R14"],
       "PALIO": [
         "165/70R13",
         "175/65R14",
@@ -863,23 +835,13 @@
         "185/65R14",
         "195/55R16"
       ],
-      "PULSE": [
-        "195/60R16",
-        "205/50R17"
-      ],
-      "PULSE ABARTH": [
-        "215/45R18"
-      ],
-      "PUNTO": [
-        "185/60R15",
-        "195/55R16",
-        "195/60R15"
-      ],
-      "SIENA": [
-        "165/70R13",
-        "175/65R14",
-        "185/60R15"
-      ],
+      "PULSE": ["195/60R16", "205/50R17"],
+      "PULSE ABARTH": ["215/45R18"],
+      "PUNTO": ["185/60R15", "195/55R16", "195/60R15"],
+      "SCUDATO": ["195/75R16", "225/75R16"],
+      "SCUDO": ["215/65R16"],
+      "SIENA": ["165/70R13", "175/65R14", "185/60R15"],
+      "STILO": ["195/65R15", "205/55R16", "215/50R17"],
       "STRADA": [
         "175/70R14",
         "175/80R14",
@@ -890,99 +852,77 @@
         "205/70R15",
         "255/40R20"
       ],
-      "TORO": [
-        "215/65R16",
-        "225/60R17",
-        "225/60R18"
-      ],
-      "TORO II": [
-        "225/65R17"
-      ],
+      "TIPO": ["175/65R14"],
+      "TORO": ["215/65R16", "225/60R17", "225/60R18"],
+      "TORO II": ["225/65R17"],
       "UNO": [
         "165/70R13",
         "175/65R14",
         "175/70R13",
         "185/60R15"
-      ],
-      "UNOK": [
-        "165/70R13"
       ]
     },
     "Ford": {
-      "BRONCO": [
-        "225/65R17"
-      ],
-      "CAPTIVA": [
-        "235/55R18",
-        "235/60R17"
-      ],
-      "CR0V": [
-        "225/60R18"
-      ],
-      "ECOSPORT": [
-        "205/60R16",
-        "205/65R15"
-      ],
+      "BRONCO": ["225/65R17"],
+      "CAPTIVA": ["235/55R18", "235/60R17"],
+      "ECOSPORT": ["205/60R16", "205/65R15"],
+      "EDGE": ["245/50R20", "245/60R18"],
+      "EXPLORER": ["245/65R17", "255/70R16"],
+      "F-1000": ["215/80R16", "235/75R15"],
       "FIESTA": [
         "165/70R13",
         "175/65R14",
         "185/60R15",
         "195/55R15"
       ],
-      "FIESTA II": [
-        "195/50R16"
-      ],
+      "FIESTA II": ["195/50R16"],
       "FOCUS": [
         "185/70R14",
         "195/60R15",
         "205/55R16",
         "215/50R17"
       ],
+      "FUSION": ["225/50R17", "235/45R18"],
+      "GALAXIE": ["235/60R15"],
       "KA": [
         "165/70R13",
         "175/65R14",
         "185/60R15",
         "195/55R15"
       ],
-      "KANGOO": [
-        "175/65R14"
-      ],
+      "KANGOO": ["175/65R14"],
+      "MAVERICK": ["215/70R14"],
+      "MONDEO": ["195/60R15"],
+      "MUSTANG": ["255/40R19"],
       "RANGER": [
         "225/70R14",
         "235/75R15",
-        "245/70R16",
         "255/55R20",
-        "255/70R16"
+        "255/70R16",
+        "265/55R17",
+        "265/60R18",
+        "265/65R17",
+        "265/70R18"
       ],
-      "RANGER IV": [
-        "255/55R20"
-      ],
-      "RANGER ROVER": [
-        "255/55R19"
-      ],
-      "TERRITORY": [
-        "235/50R18",
-        "235/50R19",
-        "235/55R17"
-      ]
+      "RANGER IV": ["255/55R20"],
+      "RANGER ROVER": ["255/55R19"],
+      "TERRITORY": ["235/50R18", "235/50R19", "235/55R17"],
+      "TRANSIT": ["235/65R16"]
     },
     "Honda": {
+      "ACCORD": ["225/50R17"],
       "CITY": [
         "175/65R15",
         "185/55R16",
         "185/60R15",
         "255/40R20"
       ],
-      "CITYCLASS": [
-        "195/75R16",
-        "225/75R16"
-      ],
+      "CITYCLASS": ["225/75R16"],
       "CIVIC": [
         "185/65R15",
         "205/50R17",
         "205/55R16",
         "215/50R17",
-        "225/35R19",
         "235/40R18"
       ],
       "CR-V": [
@@ -997,44 +937,38 @@
         "185/55R16",
         "185/60R15",
         "255/40R20"
-      ]
+      ],
+      "HR-V": ["215/55R17", "215/60R17"]
     },
     "Hyundai": {
-      "CRETA": [
-        "205/65R16",
-        "215/60R17"
-      ],
+      "AZERA": ["235/55R17", "245/45R18"],
+      "CRETA": ["205/65R16", "215/60R17"],
+      "ELANTRA": ["205/60R16"],
+      "H100": ["195/80R14"],
       "HB20": [
         "175/70R14",
         "185/60R15",
         "195/55R16",
         "195/65R15"
       ],
-      "HB20S": [
-        "185/60R15"
-      ],
-      "HB20X": [
-        "195/65R15"
-      ],
-      "HB20X II": [
-        "195/60R16"
-      ],
-      "IX35": [
-        "225/55R18",
-        "225/60R17"
-      ],
-      "SANTA FE": [
-        "235/55R19",
-        "235/60R18"
-      ],
+      "HB20S": ["185/60R15"],
+      "HB20X": ["195/65R15"],
+      "HB20X II": ["195/60R16"],
+      "HR": ["195/70R15", "205/70R15"],
+      "I30": ["225/45R17"],
+      "IX35": ["225/55R18", "225/60R17"],
+      "SANTA FE": ["235/55R19", "235/60R18"],
+      "SONATA": ["225/45R18"],
       "TUCSON": [
         "215/65R16",
         "225/55R18",
         "225/60R17",
         "235/60R16"
-      ]
+      ],
+      "VERACRUZ": ["245/60R18"]
     },
     "Jeep": {
+      "CHEROKE": ["245/65R17"],
       "CHEROKEE": [
         "225/55R18",
         "225/60R17",
@@ -1044,50 +978,35 @@
         "235/75R15",
         "245/65R17"
       ],
-      "COMMANDER": [
-        "235/50R19",
-        "235/55R18",
-        "245/65R17"
-      ],
-      "COMPASS": [
-        "215/60R17",
-        "225/55R18",
-        "225/60R17"
-      ],
-      "COMPASS II": [
-        "235/45R19"
-      ],
+      "COMMANDER": ["235/50R19", "235/55R18", "245/65R17"],
+      "COMPASS": ["215/60R17", "225/55R18", "225/60R17"],
+      "COMPASS II": ["235/45R19"],
       "GRAND CHEROKEE": [
         "245/65R17",
-        "245/70R16"
+        "245/70R16",
+        "265/50R20",
+        "265/60R18"
       ],
-      "RENEGADE": [
-        "215/60R17",
-        "215/65R16",
-        "225/55R18"
-      ]
+      "GRAND CHROKEE": ["245/65R17"],
+      "RENEGADE": ["215/60R17", "215/65R16", "225/55R18"],
+      "WRANGLER": ["225/75R15", "245/75R16", "255/70R18"]
     },
     "Kia": {
-      "CARNIVAL": [
-        "235/55R19",
-        "235/60R17",
-        "235/60R18"
-      ],
-      "CERATO": [
-        "195/65R15",
-        "205/55R16",
-        "205/60R16"
-      ],
+      "BONGO": ["195/70R15", "195/75R16"],
+      "CADENZA": ["225/55R17"],
+      "CARNIVAL": ["235/55R19", "235/60R17", "235/60R18"],
+      "CERATO": ["195/65R15", "205/55R16", "205/60R16"],
+      "MOHAVE": ["265/60R18"],
+      "OPTIMA": ["225/45R18"],
+      "PICANTO": ["185/55R15"],
       "SORENTO": [
-        "225/75R16",
         "235/55R19",
         "235/60R18",
         "245/65R17",
         "245/70R16"
       ],
-      "SORENTO II": [
-        "235/55R19"
-      ],
+      "SORENTO II": ["235/55R19"],
+      "SOUL": ["205/55R16"],
       "SPORTAGE": [
         "215/65R16",
         "215/70R16",
@@ -1096,9 +1015,7 @@
         "235/60R16",
         "245/45R19"
       ],
-      "SPORTAGE IV": [
-        "235/50R19"
-      ]
+      "SPORTAGE IV": ["235/50R19"]
     },
     "Land Rover": {
       "DEFENDER": [
@@ -1107,211 +1024,175 @@
         "255/65R19",
         "255/70R18"
       ],
-      "DEFENDER 110": [
-        "255/65R19"
-      ],
-      "DEFENDER 90": [
-        "255/65R19"
-      ],
-      "DISCOVERY": [
-        "245/45R19"
-      ],
-      "DISCOVERY 3": [
-        "255/55R19"
-      ],
-      "DISCOVERY 4": [
-        "255/55R19"
-      ],
-      "DISCOVERY 5": [
-        "255/55R20"
-      ],
-      "DISCOVERY SPORT": [
+      "DEFENDER 110": ["255/65R19"],
+      "DEFENDER 90": ["255/65R19"],
+      "DISCOVERY": ["255/50R20"],
+      "DISCOVERY 3": ["255/55R19"],
+      "DISCOVERY 4": ["255/55R19"],
+      "DISCOVERY 5": ["255/55R20", "275/45R21"],
+      "DISCOVERY SPORT": ["235/55R19", "235/60R18"],
+      "EVOQUE": ["235/55R19", "235/60R18"],
+      "FREELANDER": [
+        "215/65R16",
+        "225/55R17",
         "235/55R19",
-        "235/60R18"
+        "235/60R18",
+        "235/65R17"
       ],
-      "EVOQUE": [
-        "235/55R19",
-        "235/60R18"
-      ]
+      "RANGE ROVER": ["255/55R19"],
+      "VELAR": ["255/55R19"]
     },
     "Mitsubishi": {
+      "AIRTREK": ["215/55R17"],
       "ASX": [
         "215/60R17",
         "225/55R18",
         "225/60R17",
         "235/60R16"
       ],
-      "ECLIPSE CROSS": [
-        "225/55R18"
-      ],
+      "ECLIPSE": ["215/50R17"],
+      "ECLIPSE CROSS": ["225/55R18"],
       "L200": [
         "205/75R16",
-        "215/65R16",
         "215/80R16",
-        "225/75R16",
         "245/70R16",
         "255/70R16",
-        "255/75R15"
+        "265/65R17",
+        "265/70R16"
       ],
-      "OUTLANDER": [
-        "225/55R18",
-        "255/45R20"
-      ],
+      "LANCER": ["215/45R18", "245/40R18"],
+      "OUTLANDER": ["225/55R18", "255/45R20"],
       "PAJERO": [
-        "235/75R15"
+        "235/75R15",
+        "265/50R20",
+        "265/55R17",
+        "265/60R18",
+        "265/65R17",
+        "265/70R16",
+        "265/70R18"
       ],
-      "PAJERO TR4": [
-        "225/65R17"
-      ]
+      "PAJERO FULL": ["265/60R18"],
+      "PAJERO SPORT": ["265/50R20", "265/60R18", "265/70R16"],
+      "PAJERO TR4": ["225/65R17"]
     },
     "Nissan": {
-      "FRONTIER": [
-        "215/65R16",
-        "225/75R15",
-        "255/65R17",
-        "255/70R16"
-      ],
-      "KICKS": [
-        "205/55R17",
-        "205/60R16"
-      ],
+      "FRONTIER": ["225/75R15", "255/65R17", "255/70R16"],
+      "KICKS": ["205/55R17", "205/60R16"],
+      "LEAF": ["215/50R17"],
+      "LIVINA": ["185/70R14"],
       "MARCH": [
         "165/70R14",
         "185/55R16",
         "185/60R15",
         "255/40R20"
       ],
-      "SENTRA": [
-        "195/60R15",
-        "205/50R17",
-        "205/55R16"
-      ],
+      "PATHFINDER": ["245/65R17", "255/65R17"],
+      "SENTRA": ["195/60R15", "205/50R17", "205/55R16"],
+      "TIIDA": ["195/55R16"],
       "VERSA": [
         "185/65R15",
         "195/55R16",
         "195/65R15",
         "205/50R17",
         "205/55R16"
-      ]
+      ],
+      "X-TRAIL": ["215/65R16"]
     },
     "Peugeot": {
-      "2008": [
-        "205/60R16",
-        "215/60R17"
-      ],
-      "206": [
-        "175/65R14"
-      ],
-      "207": [
-        "175/65R14",
-        "185/60R15",
-        "185/65R14"
-      ],
+      "106": ["165/70R13"],
+      "19": ["195/50R15"],
+      "2008": ["205/60R16", "215/60R17"],
+      "205": ["165/70R13"],
+      "206": ["175/65R14"],
+      "207": ["175/65R14", "185/60R15", "185/65R14"],
       "208": [
         "195/55R16",
         "195/60R15",
         "195/65R15",
         "205/45R17"
       ],
-      "208 MCA": [
-        "185/65R15"
-      ],
-      "3008 II": [
-        "235/50R19"
-      ],
-      "PEUGEOT 208": [
-        "205/45R17"
-      ]
+      "208 MCA": ["185/65R15"],
+      "3008 II": ["235/50R19"],
+      "307": ["195/65R15", "205/55R16"],
+      "308": ["205/55R16", "225/45R17"],
+      "408": ["205/55R16", "225/45R17"],
+      "5008": ["235/50R19"],
+      "BOXER": ["205/70R15", "225/75R16"],
+      "EXPERT": ["215/65R16"],
+      "PEUGEOT 208": ["205/45R17"]
     },
     "Porsche": {
-      "718 BOXSTER": [
-        "235/35R20",
-        "235/40R19"
-      ],
-      "718 CAYMAN": [
-        "235/40R19"
-      ],
+      "718 BOXSTER": ["235/35R20", "235/40R19"],
+      "718 CAYMAN": ["235/40R19", "265/35R20", "265/45R18"],
       "911": [
         "235/35R19",
         "235/45R18",
         "245/35R20",
-        "245/40R18",
-        "255/35R20"
+        "255/35R20",
+        "265/35R21",
+        "275/35R20",
+        "285/35R19",
+        "295/35R19",
+        "305/30R19",
+        "305/30R21"
       ],
-      "911 CARRERA": [
-        "235/40R19"
-      ],
-      "911 GT3": [
-        "255/35R20"
-      ],
-      "911 TURBO": [
-        "255/35R20"
-      ],
-      "911 TURBO S": [
-        "255/35R20"
-      ],
+      "911 CARRERA": ["235/40R19", "295/35R19"],
+      "911 GT3": ["255/35R20", "315/30R21"],
+      "911 TURBO": ["255/35R20", "315/30R21"],
+      "911 TURBO S": ["255/35R20", "315/30R21"],
       "BOXSTER": [
-        "235/35R20"
+        "235/35R20",
+        "265/35R20",
+        "265/45R18",
+        "285/35R19"
       ],
-      "CAYENNE": [
-        "235/65R17"
-      ],
+      "CAYENNE": ["235/65R17", "275/40R22", "315/35R22"],
       "CAYMAN": [
         "235/35R20",
         "235/45R18",
-        "245/35R20"
-      ],
-      "EQS": [
-        "245/40R18"
+        "265/35R20",
+        "265/45R18",
+        "285/35R19"
       ],
       "MACAN": [
         "235/55R19",
         "255/40R22",
-        "255/45R21"
+        "255/45R21",
+        "295/35R22",
+        "295/40R21"
       ],
       "TAYCAN": [
         "225/55R19",
-        "245/40R18",
-        "255/40R20"
-      ],
-      "TAYCAN E-TURBO": [
-        "255/40R20"
+        "255/40R20",
+        "265/35R21",
+        "285/40R20",
+        "295/35R20",
+        "305/30R21"
       ]
     },
     "Renault": {
-      "CAPTUR": [
-        "215/60R17"
-      ],
-      "DUSTER": [
-        "215/65R16"
-      ],
-      "KWID": [
-        "165/70R14"
-      ],
-      "LOGAN": [
-        "185/65R15",
-        "185/70R14"
-      ],
-      "OROCH": [
-        "215/65R16"
-      ],
+      "CAPTUR": ["215/60R17"],
+      "CLIO": ["165/70R14", "175/65R14", "185/55R15"],
+      "DUSTER": ["215/65R16"],
+      "KWID": ["165/70R14"],
+      "LOGAN": ["185/65R15", "185/70R14"],
+      "MASTER": ["205/75R16"],
+      "MEGANE": ["185/60R15", "195/65R15", "205/55R16"],
+      "OROCH": ["215/65R16"],
       "SANDERO": [
         "185/65R15",
         "185/70R14",
         "195/55R16",
         "205/55R16"
       ],
-      "SANDERO IV": [
-        "205/45R17"
-      ],
-      "SANDERO STEPWAY": [
-        "195/60R16"
-      ]
+      "SANDERO IV": ["205/45R17"],
+      "SANDERO STEPWAY": ["195/60R16"],
+      "SCENIC": ["195/60R15"],
+      "SYMBOL": ["175/65R14", "185/55R15"]
     },
     "Toyota": {
-      "COROLL A": [
-        "215/50R17"
-      ],
+      "BANDEIRANTE": ["215/80R16"],
+      "CAMRY": ["235/45R18"],
       "COROLLA": [
         "185/65R14",
         "185/70R14",
@@ -1319,50 +1200,44 @@
         "195/65R15",
         "205/55R16",
         "215/50R17",
-        "225/35R19",
-        "225/45R17"
+        "225/45R17",
+        "235/40R18"
       ],
-      "COROLLA CROSS": [
-        "215/60R17",
-        "225/50R18"
-      ],
-      "ETIOS": [
-        "175/65R14",
-        "185/60R15"
-      ],
+      "COROLLA CROSS": ["215/60R17", "225/50R18"],
+      "ETIOS": ["175/65R14", "185/60R15"],
       "HILUX": [
         "215/80R16",
         "225/70R17",
-        "235/75R15"
+        "235/75R15",
+        "265/55R17",
+        "265/60R18",
+        "265/65R17",
+        "265/70R16",
+        "265/70R18"
       ],
-      "RAV4": [
-        "215/70R16",
-        "225/60R18",
-        "235/55R18"
-      ],
-      "RAV4 II": [
-        "225/65R17"
-      ],
+      "LAND CRUISER": ["265/65R17"],
+      "LANDCRUISER": ["265/55R17", "265/65R17"],
+      "PRIUS": ["195/65R15"],
+      "RAV4": ["215/70R16", "225/60R18", "235/55R18"],
+      "RAV4 II": ["225/65R17"],
       "SW4": [
-        "225/75R15"
+        "225/75R15",
+        "265/55R17",
+        "265/60R18",
+        "265/65R17",
+        "265/70R16"
       ],
-      "YARIS": [
-        "185/60R15",
-        "195/50R16"
-      ]
-    },
-    "Vol": {
-      "CROSSFOX": [
-        "195/55R16"
-      ]
+      "YARIS": ["185/60R15", "195/50R16"]
     },
     "Volkswagen": {
-      "AMAROK": [
-        "245/45R19",
-        "245/65R17",
-        "245/70R16",
-        "255/60R18"
-      ],
+      "AMAROK": ["245/65R17", "255/50R20", "255/60R18"],
+      "BASALT T-CROSS": ["205/60R16"],
+      "BEETLE": ["195/65R15", "205/55R16"],
+      "CARAVELLE": ["195/70R15"],
+      "CROSSFOX": ["195/55R16", "205/60R15"],
+      "DELIVERY": ["225/75R16"],
+      "EUROVAN": ["195/70R15"],
+      "FOX": ["175/65R14", "195/55R15"],
       "GOL": [
         "165/70R13",
         "175/70R13",
@@ -1380,13 +1255,13 @@
         "205/55R16",
         "225/45R17"
       ],
-      "JETTA": [
-        "225/45R17"
-      ],
-      "NIVUS": [
-        "205/55R17",
-        "205/60R16"
-      ],
+      "ID.4": ["255/40R21"],
+      "ID.BUZZ": ["265/45R20"],
+      "JETTA": ["225/45R17"],
+      "KOMBI": ["195/80R14"],
+      "NIVUS": ["205/55R17", "205/60R16"],
+      "PARATI": ["175/70R13", "195/50R15", "195/55R15"],
+      "PASSAT": ["235/45R17", "235/45R18"],
       "POLO": [
         "165/70R14",
         "185/60R14",
@@ -1395,12 +1270,9 @@
         "195/55R16",
         "205/50R17"
       ],
-      "POLO GTS": [
-        "205/45R18"
-      ],
-      "POLO TRACK": [
-        "185/65R15"
-      ],
+      "POLO GTS": ["205/45R18"],
+      "POLO TRACK": ["185/65R15"],
+      "SANTANA": ["185/65R14"],
       "SAVEIRO": [
         "175/70R14",
         "185/60R14",
@@ -1408,9 +1280,9 @@
         "195/55R15",
         "205/60R15"
       ],
-      "T-CROSS": [
-        "205/55R17"
-      ],
+      "SPACEFOX": ["195/55R15"],
+      "T-CROSS": ["205/55R17", "205/60R16"],
+      "TAOS": ["235/45R19"],
       "TIGUAN": [
         "215/65R17",
         "235/50R18",
@@ -1418,45 +1290,46 @@
         "235/55R18",
         "255/45R19"
       ],
-      "UP!": [
-        "175/70R14"
-      ],
+      "TOUAREG": ["235/65R17"],
+      "UP": ["175/70R14", "185/60R15"],
+      "UP!": ["175/70R14"],
+      "VIRSTUS": ["205/50R17"],
       "VIRTUS": [
         "195/65R15",
         "205/45R18",
         "205/50R17",
         "205/55R16"
       ],
-      "VIRTUS EXCLUSIVE": [
-        "205/45R18"
-      ],
+      "VIRTUS EXCLUSIVE": ["205/45R18"],
       "VOYAGE": [
         "175/70R14",
         "185/65R14",
         "195/50R16",
         "195/55R15"
+      ],
+      "TERA": [
+        "185/65R15",
+        "205/60R16",
+        "205/55R17"
       ]
     },
     "Volvo": {
-      "TT": [
-        "245/40R18"
-      ],
-      "XC40": [
-        "235/50R19",
-        "235/55R18",
-        "255/40R20"
-      ],
+      "C40": ["255/40R20", "255/45R19"],
+      "EX30": ["225/55R18", "245/40R20", "245/45R19"],
+      "EX90": ["295/40R21"],
+      "S60": ["235/40R18", "235/40R19", "235/45R17"],
+      "V60": ["235/40R18"],
+      "XC 40": ["255/45R19"],
+      "XC40": ["235/50R19", "235/55R18", "255/40R20"],
       "XC60": [
-        "215/45R18",
         "235/55R19",
         "235/60R18",
         "235/65R17",
-        "245/35R19",
+        "255/40R21",
         "255/45R20"
       ],
-      "XC90": [
-        "235/65R17"
-      ]
+      "XC70": ["235/55R17"],
+      "XC90": ["235/65R17"]
     }
   };
 
@@ -1528,17 +1401,22 @@
      portes: array de portes aceitos. [] = vale para todos.
      aroMinimo: aro mínimo em polegadas. null = sem restrição.
      ============================================================ */
+  // IMPORTANTE: cada cupom tem sua PRÓPRIA chave de imagem aqui embaixo.
+  // Nunca reaproveite a mesma chave em dois cupons diferentes — foi isso
+  // que causava o bug de "editei uma imagem e outro card mudou junto".
+  // Se precisar trocar a foto de um cupom, troque só o link dessa chave.
   const IMG = {
-    pneuSport:  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhyzUjT4WmG_4ndYxfNsAAeZ6_YiWIDWT1qLBMDRbxDcRj4P0wQBTDttw&s=10',
-    pneuAngle:  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkC5V50ygaGtXUyDEikdJpJ422HwAjUdJmk2N_Vq9nL4zIyF1tyqKU4vug&s=10',
-    pneuSuv:    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyVckrLtgt9tZOennrYpZJTEfM3u_cdDEiWUchma0MBJSxOpbWAfcL6N8L&s=10',
-    pneuTour:   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyVckrLtgt9tZOennrYpZJTEfM3u_cdDEiWUchma0MBJSxOpbWAfcL6N8L&s=10',
-    pneuPerf:   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyVckrLtgt9tZOennrYpZJTEfM3u_cdDEiWUchma0MBJSxOpbWAfcL6N8L&s=10',
-    freios:     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjV8sftpQ7R6RovuKdEVcfZ9m-J8Zy6qeGQWr4wh0U0iNoIw0n_VR68c1Z&s=10',
-    oleo:       'https://static.vecteezy.com/system/resources/thumbnails/044/313/732/small/pour-engine-oil-car-automotive-maintenance-transportation-lubricant-industry-clipping-path-png.png',
-    alinhamento:'https://www.2e4rodas.com.br/wp-content/uploads/2021/10/alinhamento-automotivo.png',
-    checkup:    'https://www.azulseguros.com.br/wp-content/uploads/2013/11/revisao.jpg',
-    truck:      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyVckrLtgt9tZOennrYpZJTEfM3u_cdDEiWUchma0MBJSxOpbWAfcL6N8L&s=10'
+    // ---------- SERVIÇOS (chave = nome do serviço) ----------
+    montagemPneu: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkC5V50ygaGtXUyDEikdJpJ422HwAjUdJmk2N_Vq9nL4zIyF1tyqKU4vug&s=10', // Montagem de pneus — cupom "montagem-gratis"
+    checkup:      'https://www.azulseguros.com.br/wp-content/uploads/2013/11/revisao.jpg', // Check-up preventivo — cupom "checkup-gratis"
+    trocaOleo:    'https://static.vecteezy.com/system/resources/thumbnails/044/313/732/small/pour-engine-oil-car-automotive-maintenance-transportation-lubricant-industry-clipping-path-png.png', // Troca de óleo — cupom "oleo-30"
+    freios:       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjV8sftpQ7R6RovuKdEVcfZ9m-J8Zy6qeGQWr4wh0U0iNoIw0n_VR68c1Z&s=10', // Freios — cupom "freio-50"
+    alinhamento:  'https://www.2e4rodas.com.br/wp-content/uploads/2021/10/alinhamento-automotivo.png', // Alinhamento e balanceamento — cupom "alinha-20"
+    truckCenter:  'https://romapneus.com.br/media/wysiwyg/Itaqua.webp', // TODO Lucas: trocar por foto de caminhão/frota — cupom "truck-revisao"
+    suspensao:    'https://blog.nakata.com.br/storage/uploads/2018/02/163814-sistema-de-suspensao-tudo-o-que-o-motorista-precisa-saber.jpg', // TODO Lucas: trocar por foto de amortecedor — cupom "suspensao-seminovo"
+
+    // ---------- PNEUS À VENDA NO SITE (comentário diz o que é o pneu) ----------
+    pneuJogo4: 'https://romapneus.com.br/media/catalog/product/cache/9e523edd3336df881d108deb6284e486/2/0/2023-1141_kelly_edge_sport2_angled_1_12.webp' // TODO Lucas: pneu de passeio/SUV Goodyear vendido em jogo de 4 unidades — cupom "jogo4-goodyear"
   };
 
   const CUPONS = [
@@ -1551,7 +1429,7 @@
       valor: 'R$ 100',
       descricao: 'Na compra do jogo com 4 pneus de modelos selecionados da linha Goodyear.',
       regras: '*Consulte medidas válidas no balcão ou via televendas. Não cumulativo com outras promoções.',
-      imagem: IMG.alinhamento,
+      imagem: IMG.pneuJogo4,
       textoBotao: 'Resgatar Cupom',
       codigo: 'JOGO4ROMA',
       temCodigo: true,
@@ -1568,7 +1446,7 @@
       valor: 'GRÁTIS',
       descricao: 'Montagem sem custo na compra de pneus da linha de passeio *Válido apenas em nosso site*.',
       regras: '*Válido apenas para pneus de passeio. Não inclui balanceamento nem alinhamento.',
-      imagem: IMG.pneuAngle,
+      imagem: IMG.montagemPneu,
       textoBotao: 'Agendar Montagem',
       codigo: null,
       temCodigo: false,
@@ -1580,7 +1458,7 @@
       id: 'checkup-gratis',
       categoria: 'checkup',
       tag: 'Revisão',
-      selo: 'Lead magnet',
+      selo: 'Completa',
       prefixo: 'Inspeção Completa',
       valor: 'GRÁTIS',
       descricao: 'Check-up preventivo de freios, suspensão, amortecedores e muito mais nas 13 unidades.',
@@ -1602,7 +1480,7 @@
       valor: 'R$ 30',
       descricao: 'Desconto na troca de óleo + substituição do filtro.',
       regras: '*Consulte a viscosidade e especificação recomendada para o seu veículo.',
-      imagem: IMG.oleo,
+      imagem: IMG.trocaOleo,
       textoBotao: 'Agendar Serviço',
       codigo: 'OLEO30',
       temCodigo: true,
@@ -1636,7 +1514,7 @@
       valor: 'R$ 20 OFF',
       descricao: 'No combo de Alinhamento + Balanceamento de 4 rodas.',
       regras: '*Garante desgaste regular dos pneus e estabilidade de direção.',
-      imagem: IMG.pneuSport,
+      imagem: IMG.alinhamento,
       textoBotao: 'Agendar Alinhamento',
       codigo: 'ALINHA20',
       temCodigo: true,
@@ -1653,7 +1531,7 @@
       valor: 'GRÁTIS',
       descricao: 'Análise técnica de pneus e recapagem para frotas no nosso Truck Center.',
       regras: '*Exclusivo para veículos pesados. Agendamento prévio obrigatório.',
-      imagem: IMG.truck,
+      imagem: IMG.truckCenter,
       textoBotao: 'Falar com Frotas',
       codigo: null,
       temCodigo: false,
@@ -1670,7 +1548,7 @@
       valor: 'R$ 80',
       descricao: 'Desconto na troca do par de amortecedores dianteiros. Para rodas aro 17 ou maiores.',
       regras: '*Válido para veículos com aro 17 polegadas ou superior. Mão de obra inclusa.',
-      imagem: IMG.alinhamento,
+      imagem: IMG.suspensao,
       textoBotao: 'Agendar Suspensão',
       codigo: 'SUSP80',
       temCodigo: true,
@@ -1796,7 +1674,7 @@
     const instrucao = c.temCodigo
       ? '<p class="rp-card-instrucao">' +
           '<span class="material-icons-outlined">info</span>' +
-          '<span>Mostre esse cupom na loja ou clique abaixo para falar com nosso televendas</span>' +
+          '<span>Mostre o cupom <strong>' + escapar(c.codigo) + '</strong> na loja ou fale com nosso televendas</span>' +
         '</p>'
       : '';
 
@@ -1935,40 +1813,13 @@
   }
 
   /* ============================================================
-     8) EVENTOS — abas, copiar, limpar
+     8) EVENTOS — abas, limpar
      ============================================================ */
   el.abas.addEventListener('click', function (ev) {
     const btn = ev.target.closest('.rp-aba');
     if (!btn) return;
     estado.categoria = btn.getAttribute('data-cat');
     renderizar();
-  });
-
-  el.grid.addEventListener('click', function (ev) {
-    const btn = ev.target.closest('.rp-btn-copiar');
-    if (!btn) return;
-
-    const codigo = btn.getAttribute('data-codigo');
-    const html = btn.innerHTML;
-
-    function sucesso() {
-      btn.innerHTML = '<span class="material-icons-outlined" style="font-size:1rem;color:#16A34A;">check_circle</span><span>Copiado!</span>';
-      setTimeout(function () { btn.innerHTML = html; }, 2000);
-    }
-
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(codigo).then(sucesso).catch(function () {
-        btn.innerHTML = '<span>Código: ' + codigo + '</span>';
-      });
-    } else {
-      const tmp = document.createElement('textarea');
-      tmp.value = codigo;
-      document.body.appendChild(tmp);
-      tmp.select();
-      try { document.execCommand('copy'); sucesso(); }
-      catch (e) { btn.innerHTML = '<span>Código: ' + codigo + '</span>'; }
-      document.body.removeChild(tmp);
-    }
   });
 
   document.getElementById('rpLimparFiltro').addEventListener('click', function () {
@@ -2190,5 +2041,3 @@
 
 })();
 </script>
-</body>
-</html>
